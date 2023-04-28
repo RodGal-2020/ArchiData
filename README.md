@@ -15,4 +15,3 @@ devtools::install_github("RodGal-2020/ArchiData")
 ## Usage
 
 To use ArchiData, simply load the package and start exploring your architectural data.
-

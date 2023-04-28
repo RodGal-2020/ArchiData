@@ -1,5 +1,5 @@
 .onLoad <- function() {
-  ArchData::package_info()
+  ArchiData::package_info()
 
   default <- readline("Do you want to use the default parameters' path (config/parameters.R)? (1/0): \n")
   default %<>% as.numeric()
