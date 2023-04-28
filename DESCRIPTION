@@ -1,0 +1,17 @@
+Package: ArchiData
+Title: 🏛️ ArchiData: Architectural Data Analysis
+Version: 0.0.2.230428
+Authors@R: 
+    person("Xopre", "-", , "rodgal2020@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5825-2724"))
+Description: Analyze architectural data in a coherent way.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports:
+    tibble,
+    lifecycle
+Depends: crayon,
+  magrittr
