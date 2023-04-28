@@ -1,4 +1,4 @@
-# ArchiData
+# 🏛️ ArchiData
 
 ArchiData is an R package for the analysis of architectural data. It provides a suite of functions for analyzing and visualizing various aspects of architectural design, such as building dimensions, room layouts, and facade features.
 
