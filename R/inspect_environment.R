@@ -18,7 +18,7 @@
 #'
 #' @export
 inspect_environment <- function(...) {
-  source("parameters.R")
+  # source("config/parameters.R") # Made in .onLoad in zzz.R
 
   params = ls()
   params = params[!params %in% function_names]

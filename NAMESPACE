@@ -3,4 +3,5 @@
 export(glance)
 export(inspect_environment)
 export(package_info)
+export(setup)
 export(template)
