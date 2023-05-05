@@ -20,8 +20,14 @@ glance <- function(p_name) {
   if (l_p_value > 1) {
     # Print a general message and then, for each value, a new subline with the value
     message(paste0("🔎 ", crayon::cyan(p_name), " = "))
-    for (i in 1:l_p_value) {
-      message(paste0("\t", p_value[i]))
+    if (is.list(p_value)) {
+      for (i in 1:l_p_value) {
+        message(paste0("\t", p_value[[i]]))
+      }
+    } else {
+      for (i in 1:l_p_value) {
+        message(paste0("\t", p_value[i]))
+      }
     }
   } else {
     message(paste0("🔎 ", crayon::cyan(p_name), " =\n\t", p_value))
