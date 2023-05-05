@@ -15,3 +15,10 @@ devtools::install_github("RodGal-2020/ArchiData")
 ## Usage
 
 To use ArchiData, simply load the package and start exploring your architectural data.
+
+
+## Ideas
+
+- `setup`:
+  - Use lists of elements for the `parameters.R` file instead of the `not_for_printing` and `function_names` parameters.. 
+  - Add a comprobation for files declared, such as `csv_paths`, creating a list like the `not_for_printing` or the `function_names` lists.
