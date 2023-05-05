@@ -1,6 +1,6 @@
 Package: ArchiData
 Title: 🏛️ ArchiData: Architectural Data Analysis
-Version: 0.0.3.230428
+Version: 0.0.4.230505
 Authors@R: 
     person("Xopre", "-", , "rodgal2020@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5825-2724"))

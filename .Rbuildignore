@@ -1,2 +1,4 @@
+^renv$
+^renv\.lock$
 ^ArchiData\.Rproj$
 ^\.Rproj\.user$

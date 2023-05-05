@@ -21,8 +21,8 @@ inspect_environment <- function(...) {
   # source("config/parameters.R") # Made in .onLoad in zzz.R
 
   params = ls()
-  params = params[!params %in% function_names]
-  params = params[!params %in% not_for_printing]
+  params = params[!params %in% get("function_names")]
+  params = params[!params %in% get("not_for_printing")]
   # Print information about each parameter already in the environment
   for (p in params) {
     ArchiData::glance(p)
