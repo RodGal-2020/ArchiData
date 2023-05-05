@@ -20,11 +20,15 @@
 inspect_environment <- function(...) {
   # source("config/parameters.R") # Made in .onLoad in zzz.R
 
-  params = ls()
-  params = params[!params %in% get("function_names")]
-  params = params[!params %in% get("not_for_printing")]
+  params = ls(envir=.GlobalEnv) # Really important to have the parameter
+  params = params[!params %in% get("function_names")] # Avoid functions
+  params = params[!params %in% get("not_for_printing")] # Avoid non-printable
   # Print information about each parameter already in the environment
   for (p in params) {
-    ArchiData::glance(p)
+    (p_string = as.symbol(p))
+    typeof(p_string)
+    (p_string = as.character(as.name(p)))
+    typeof(p_string)
+    ArchiData::glance(p_string) # glance("x")
   }
 }

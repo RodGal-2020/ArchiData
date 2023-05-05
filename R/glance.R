@@ -24,6 +24,6 @@ glance <- function(p_name) {
       message(paste0("\t", p_value[i]))
     }
   } else {
-    message(paste0("🔎 ", p_name, " =\n\t", p_value))
+    message(paste0("🔎 ", crayon::cyan(p_name), " =\n\t", p_value))
   }
 }
