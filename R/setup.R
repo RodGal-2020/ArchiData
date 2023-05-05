@@ -22,6 +22,17 @@
 #'
 #' @export
 setup = function() {
+  ##########################################
+  # Aux functions
+  # get_depth = function(this,thisdepth=0){
+  #   if(!is.list(this)){
+  #     return(thisdepth)
+  #   }else{
+  #     return(max(unlist(lapply(this,get_depth,thisdepth=thisdepth+1))))
+  #   }
+  # }
+  ##########################################
+
   default <- readline("Do you want to use the default parameters' path (config/parameters.R)? (1/0): \n")
   default %<>% as.numeric()
 
@@ -36,5 +47,6 @@ setup = function() {
     cat("🐛 You we're working in the following directory:", crayon::cyan(getwd()))
   } else {
     source(p_path)
+    # params = ls(envir=.GlobalEnv)
   }
 }

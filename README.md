@@ -20,5 +20,5 @@ To use ArchiData, simply load the package and start exploring your architectural
 ## Ideas
 
 - `setup`:
-  - Use lists of elements for the `parameters.R` file instead of the `not_for_printing` and `function_names` parameters.. 
+  - Use lists of elements for the `parameters.R` file instead of the `not_for_printing` and `function_names` parameters. YAML could also work.
   - Add a comprobation for files declared, such as `csv_paths`, creating a list like the `not_for_printing` or the `function_names` lists.

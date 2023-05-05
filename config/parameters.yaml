@@ -1,0 +1,15 @@
+functions:
+  depth: 1
+  function_option_1: !!python/object/apply:base64.b64decode
+    args:
+    - cHJpbnQoImV4YW1wbGVfZnVuY3Rpb25fMSIpCg==
+    func: !!python/name:base64.b64decode ''
+  function_option_2: "example_function_2 = function() {print('a')}"
+files:
+<  data:
+  - data/data_1.csv
+  - data/data_2.csv
+  aux_files: []
+other_parameters:
+  emojis:
+    informative: '🔎'
