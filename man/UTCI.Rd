@@ -21,8 +21,8 @@ UTCI_approx -- The Universal Thermal Climate Index (UTCI) for the input conditio
 \description{
 This function here is a R version of the Python version of the original UTCI_approx
 application written in Fortran.
-The original Python code can be found at https://github.com/ladybug-tools/ladybug-comfort/blob/e614069d143eb6c8120788bff7fff116dc0d9007/ladybug_comfort/utci.py#LL28
-The original Fortran code can be found at www.utci.org.
+The original Python code can be found \href{https://github.com/ladybug-tools/ladybug-comfort/blob/e614069d143eb6c8120788bff7fff116dc0d9007/ladybug_comfort/utci.py#LL28}{here}.
+The original Fortran code can be found \href{www.utci.org}{here}.
 }
 \details{
 UTCI

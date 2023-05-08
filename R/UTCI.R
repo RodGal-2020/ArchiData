@@ -7,8 +7,8 @@
 #' @description
 #' This function here is a R version of the Python version of the original UTCI_approx
 #'   application written in Fortran.
-#' The original Python code can be found at https://github.com/ladybug-tools/ladybug-comfort/blob/e614069d143eb6c8120788bff7fff116dc0d9007/ladybug_comfort/utci.py#LL28
-#' The original Fortran code can be found at www.utci.org.
+#' The original Python code can be found [here](https://github.com/ladybug-tools/ladybug-comfort/blob/e614069d143eb6c8120788bff7fff116dc0d9007/ladybug_comfort/utci.py#LL28).
+#' The original Fortran code can be found [here](www.utci.org).
 #'
 #' @note [1] Peter Bröde, Dusan Fiala, Krzysztof Blazejczyk, Yoram Epstein,
 #'     Ingvar Holmér, Gerd Jendritzky, Bernhard Kampmann, Mark Richards,

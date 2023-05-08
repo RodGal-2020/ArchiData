@@ -2,7 +2,7 @@
 % Please edit documentation in R/setup.R
 \name{setup}
 \alias{setup}
-\title{This is a shorter description which appears then the name of the function is recommended.}
+\title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
 setup()
 }

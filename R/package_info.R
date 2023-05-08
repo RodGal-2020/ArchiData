@@ -2,6 +2,8 @@
 #'
 #' Template for new functions
 #'
+#' @title This is a shorter description which appears when the name of the function is recommended.
+#'
 #' @description
 #' This is a template.
 #'
@@ -17,8 +19,6 @@
 #'
 #' @section Warning:
 #' This is a warning
-#'
-#' @title This is a shorter description which appears then the name of the function is recommended.
 #'
 #' @export
 package_info = function() {

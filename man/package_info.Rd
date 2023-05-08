@@ -2,7 +2,7 @@
 % Please edit documentation in R/package_info.R
 \name{package_info}
 \alias{package_info}
-\title{This is a shorter description which appears then the name of the function is recommended.}
+\title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
 package_info()
 }

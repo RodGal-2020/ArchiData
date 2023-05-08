@@ -2,7 +2,7 @@
 % Please edit documentation in R/template.R
 \name{template}
 \alias{template}
-\title{This is a shorter description which appears then the name of the function is recommended.}
+\title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
 template(my_param)
 }
