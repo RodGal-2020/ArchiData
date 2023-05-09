@@ -4,10 +4,10 @@
 \alias{setup}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-setup()
+setup(...)
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{...}{Common parameters of the package, such as \code{default}, \code{verbose} and \code{debugging}.}
 }
 \value{
 It returns...
@@ -28,6 +28,6 @@ This is a warning
 }
 
 \examples{
-print("TODO:")
+ArchiData::setup(default = 1)
 
 }

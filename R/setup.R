@@ -9,19 +9,19 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param ... Common parameters of the package, such as `default`, `verbose` and `debugging`.
 #'
 #' @return
 #' It returns...
 #'
 #' @examples
-#' print("TODO:")
+#' ArchiData::setup(default = 1)
 #'
 #' @section Warning:
 #' This is a warning
 #'
 #' @export
-setup = function() {
+setup = function(...) {
   ##########################################
   # Aux functions
   # get_depth = function(this,thisdepth=0){
@@ -32,9 +32,12 @@ setup = function() {
   #   }
   # }
   ##########################################
+  arguments <- list(...)
+  ArchiData::three_dots(arguments)
 
-  default <- readline("Do you want to use the default parameters' path (config/parameters.R)? (1/0): \n")
-  default %<>% as.numeric()
+  if (is.null(arguments$default)) {
+    default <- readline("Do you want to use the default parameters' path (config/parameters.R)? (1/0): \n") %>% as.numeric()
+  }
 
   if (default) {
     p_path = "config/parameters.R"
@@ -49,4 +52,6 @@ setup = function() {
     source(p_path)
     # params = ls(envir=.GlobalEnv)
   }
+
+  message("😊 Setup done.")
 }
