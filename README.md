@@ -18,7 +18,7 @@ To use ArchiData, simply load the package and start exploring your architectural
 
 ## License
 
-This repo uses [the MIT license](https://opensource.org/license/mit/).
+See [`LICENSE.md`](LICENSE.md).
 
 
 ## Ideas
