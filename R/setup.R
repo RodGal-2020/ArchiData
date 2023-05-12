@@ -46,12 +46,12 @@ setup = function(...) {
   }
 
   if (!file.exists(p_path)) {
-    stop("😟 chosen path doesn't exist. Aborting session.")
-    cat("🐛 You we're working in the following directory:", crayon::cyan(getwd()))
+    warning("\u1F61F Chosen path '", crayon::italic(p_path), "' doesn't exist. Be sure to have a '", crayon::italic("config/Parameters.R"),  "' file")
+    warning("\t\u1F41B You we're working in the following directory: ", crayon::italic(getwd()))
   } else {
     source(p_path)
     # params = ls(envir=.GlobalEnv)
   }
 
-  message("😊 Setup done.")
+  message("\u1F60A Setup done.")
 }

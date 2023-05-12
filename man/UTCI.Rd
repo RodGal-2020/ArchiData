@@ -7,13 +7,13 @@
 UTCI(ta, tr, vel, rh)
 }
 \arguments{
-\item{ta:}{Air temperature \link{ºC}}
+\item{ta}{Air temperature (ºC).}
 
-\item{tr:}{Mean radiant temperature \link{ºC}}
+\item{tr}{Mean radiant temperature (ºC).}
 
-\item{vel:}{Wind speed 10 m above ground level \link{m/s}.Note that this meteorological speed at 10 m is simply 1.5 times the}
+\item{vel}{Wind speed 10 m above ground level (m/s).Note that this meteorological speed at 10 m is simply 1.5 times the speed felt at ground in the original Fiala model used to build UTCI.}
 
-\item{rh:}{Relative humidity \link{\%}}
+\item{rh}{Relative humidity (\%).}
 }
 \value{
 UTCI_approx -- The Universal Thermal Climate Index (UTCI) for the input conditions as approximated by a 4-D polynomial.
@@ -30,7 +30,7 @@ UTCI
 Calculate Universal Thermal Climate Index (UTCI) using a polynomial approximation.
 }
 \note{
-\link{1} Peter Bröde, Dusan Fiala, Krzysztof Blazejczyk, Yoram Epstein,
+[1] Peter Bröde, Dusan Fiala, Krzysztof Blazejczyk, Yoram Epstein,
 Ingvar Holmér, Gerd Jendritzky, Bernhard Kampmann, Mark Richards,
 Hannu Rintamäki, Avraham Shitzer, George Havenith. 2009.
 Calculating UTCI Equivalent Temperature. In: JW Castellani & TL

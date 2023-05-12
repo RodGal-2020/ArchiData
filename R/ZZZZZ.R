@@ -1,3 +1,3 @@
-.onLoad <- function(libname, pkgname) {
-  cat("Using ArchiData", packageDescription("ArchiData", fields = "Version"), "\n")
+.onAttach <- function(libname, pkgname) {
+  packageStartupMessage("Using ArchiData ", utils::packageDescription("ArchiData", fields = "Version"))
 }

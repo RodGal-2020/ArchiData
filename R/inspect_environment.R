@@ -12,6 +12,8 @@
 #' @examples
 #' x = 1
 #' vector_of_items = c("item_1", "item_2")
+#' function_names = NULL
+#' not_for_printing = NULL
 #' inspect_environment()
 #'
 #' @title Inspect the environment.

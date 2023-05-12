@@ -16,6 +16,10 @@ devtools::install_github("RodGal-2020/ArchiData")
 
 To use ArchiData, simply load the package and start exploring your architectural data.
 
+## License
+
+This repo uses [the MIT license](https://opensource.org/license/mit/).
+
 
 ## Ideas
 

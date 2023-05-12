@@ -14,12 +14,12 @@
 #'
 #' @export
 glance <- function(p_name) {
-  # message("🔎 p_name = ", p_name)
+  # message("\u1228 p_name = ", p_name)
   p_value <- eval(as.name(p_name))
   l_p_value = length(p_value)
   if (l_p_value > 1) {
     # Print a general message and then, for each value, a new subline with the value
-    message(paste0("🔎 ", crayon::cyan(p_name), " = "))
+    message(paste0("\u1228 ", crayon::cyan(p_name), " = "))
     if (is.list(p_value)) {
       for (i in 1:l_p_value) {
         message(paste0("\t", p_value[[i]]))
@@ -30,6 +30,6 @@ glance <- function(p_name) {
       }
     }
   } else {
-    message(paste0("🔎 ", crayon::cyan(p_name), " =\n\t", p_value))
+    message(paste0("\u1228 ", crayon::cyan(p_name), " =\n\t", p_value))
   }
 }

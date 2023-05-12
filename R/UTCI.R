@@ -10,7 +10,7 @@
 #' The original Python code can be found [here](https://github.com/ladybug-tools/ladybug-comfort/blob/e614069d143eb6c8120788bff7fff116dc0d9007/ladybug_comfort/utci.py#LL28).
 #' The original Fortran code can be found [here](www.utci.org).
 #'
-#' @note [1] Peter Bröde, Dusan Fiala, Krzysztof Blazejczyk, Yoram Epstein,
+#' @note \[1\] Peter Bröde, Dusan Fiala, Krzysztof Blazejczyk, Yoram Epstein,
 #'     Ingvar Holmér, Gerd Jendritzky, Bernhard Kampmann, Mark Richards,
 #'     Hannu Rintamäki, Avraham Shitzer, George Havenith. 2009.
 #'     Calculating UTCI Equivalent Temperature. In: JW Castellani & TL
@@ -19,11 +19,10 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param ta: Air temperature [ºC]
-#' @param tr: Mean radiant temperature [ºC]
-#' @param vel: Wind speed 10 m above ground level [m/s].Note that this meteorological speed at 10 m is simply 1.5 times the
-#         speed felt at ground in the original Fiala model used to build UTCI.
-#' @param rh: Relative humidity [%]
+#' @param ta Air temperature (ºC).
+#' @param tr Mean radiant temperature (ºC).
+#' @param vel Wind speed 10 m above ground level (m/s).Note that this meteorological speed at 10 m is simply 1.5 times the speed felt at ground in the original Fiala model used to build UTCI.
+#' @param rh Relative humidity (%).
 #'
 #' @return
 #' UTCI_approx -- The Universal Thermal Climate Index (UTCI) for the input conditions as approximated by a 4-D polynomial.
