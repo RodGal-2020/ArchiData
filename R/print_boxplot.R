@@ -21,7 +21,7 @@
 #' This is a warning
 #'
 #' @export
-print_boxplot <- function(data, x_var, x_label, title) {
+print_boxplot <- function(data, x_var, x_label = "", title = "") {
   ggplot(data, aes(x = .data[[x_var]])) +
     geom_boxplot(width = 0.2, color = "black", fill = "grey", outlier.color = "red", outlier.shape = 18, outlier.size = 3) +
     theme_minimal() +
