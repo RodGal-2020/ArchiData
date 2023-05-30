@@ -1,6 +1,6 @@
 Package: ArchiData
 Title: 🏛️ ArchiData: Architectural Data Analysis
-Version: 0.1.2.230526
+Version: 0.1.3.230530
 Authors@R: 
     person("Xopre", "-", , "rodgal2020@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5825-2724"))
@@ -14,6 +14,8 @@ Imports:
     lifecycle,
     tibble,
     ggplot2,
-    reshape2
+    reshape2,
+    rpart.plot,
+    tidymodels
 Depends: crayon,
   magrittr
