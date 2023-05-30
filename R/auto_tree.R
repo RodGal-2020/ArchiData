@@ -22,20 +22,27 @@
 #' This is a warning
 #'
 #' @export
-auto_tree = function(data, formula) {
+auto_tree = function(data, formula, model_mode = "classification", model_depth = 3) {
+  ####################
+  model_min_n = dim(data)[1] / 10
+  ####################
+
   tree_recipe <- recipes::recipe(formula, data)
 
   tree_model <- parsnip::decision_tree() %>%
     parsnip::set_engine("rpart") %>%
-    parsnip::set_mode("classification")
+    parsnip::set_args(tree_depth = !!model_depth, min_n = !!model_min_n) %>%
+    parsnip::set_mode(model_mode)
 
   tree_workflow <- workflows::workflow() %>%
     workflows::add_model(tree_model) %>%
     workflows::add_recipe(tree_recipe)
 
-  trained_model <- tree_workflow %>% parsnip::fit(data)
+  trained_model <- tree_workflow %>%
+    parsnip::fit(data)
 
-  fit_engine <- trained_model %>% workflows::extract_fit_engine()
+  fit_engine <- trained_model %>%
+    workflows::extract_fit_engine()
 
   return(fit_engine)
 }

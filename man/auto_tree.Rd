@@ -4,7 +4,7 @@
 \alias{auto_tree}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-auto_tree(data, formula)
+auto_tree(data, formula, model_mode = "classification", model_depth = 3)
 }
 \arguments{
 \item{my_param}{Yep, it's a parameter.}
