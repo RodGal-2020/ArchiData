@@ -38,7 +38,5 @@ auto_cor = function(data) {
     ggplot2::theme_minimal() +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1))
 
-  print(cor_plot)
-
   return(cor_plot)
 }
