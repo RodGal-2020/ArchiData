@@ -29,7 +29,7 @@ UTCI2classification = function(UTCI) {
     breaks = c(-Inf, -40, -27, -12, 0, 9, 26, 28, 32, 38, 46, Inf),
     labels = ArchiData::UTCI_labels,
     right = TRUE
-  )
+  ) %>% ordered(levels = ArchiData::UTCI_labels)
 
   return(classification)
 }
