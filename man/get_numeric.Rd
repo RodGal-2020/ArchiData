@@ -4,10 +4,12 @@
 \alias{get_numeric}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-get_numeric(data)
+get_numeric(data, verbose = 1)
 }
 \arguments{
 \item{data}{The tibble or data frame containing the data.}
+
+\item{...}{\code{verbose} for now.}
 }
 \value{
 It returns...

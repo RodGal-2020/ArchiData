@@ -4,10 +4,12 @@
 \alias{auto_cor}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-auto_cor(data)
+auto_cor(data, verbose = 1)
 }
 \arguments{
 \item{data}{The tibble or data frame containing the data.}
+
+\item{...}{\code{verbose} for now.}
 }
 \value{
 A correlation heatmap.

@@ -10,6 +10,7 @@
 #' `r lifecycle::badge("experimental")`
 #'
 #' @param data The tibble or data frame containing the data.
+#' @param ... `verbose` for now.
 #'
 #' @return A correlation heatmap.
 #'
@@ -21,8 +22,8 @@
 #' This is a warning
 #'
 #' @export
-auto_cor = function(data) {
-  data %<>% ArchiData::get_numeric()
+auto_cor = function(data, verbose = 1) {
+  data %<>% ArchiData::get_numeric(verbose)
 
   # Calcular la matriz de correlación
   cor_matrix <- cor(data)
