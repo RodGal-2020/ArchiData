@@ -1,4 +1,4 @@
-#' outliers
+#' multi_outliers
 #'
 #' Template for new functions
 #'
@@ -21,7 +21,7 @@
 #' This is a warning
 #'
 #' @export
-outliers = function(data) {
+multi_outliers = function(data, plot = TRUE) {
   output = list()
 
   # data = iris
@@ -42,11 +42,13 @@ outliers = function(data) {
     return(gg_hist)
   }
   boxplots <- lapply(names(numeric_data), print_boxplot)
-  gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
   output$boxplots = boxplots
+  if (plot) {
+    gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
+  }
 
   ### Histograms
-  histograms <- lapply(names(numeric_data), function(var) {
+  print_hist = function(var) {
     color <- rainbow(length(names(numeric_data)))[match(var, names(numeric_data))]
     numeric_data %>%
       ggplot(aes(x = !!sym(var))) +
@@ -59,9 +61,12 @@ outliers = function(data) {
         axis.text.x = element_text(angle = 45, hjust = 1, size = 4),
         axis.text.y = element_text(size = 4)
       )
-  })
-  gridExtra::grid.arrange(grobs = histograms, ncol = 4)
+  }
+  histograms <- lapply(names(numeric_data), print_hist)
   output$histograms = histograms
+  if (plot) {
+    gridExtra::grid.arrange(grobs = histograms, ncol = 4)
+  }
 
   return(output)
 }
