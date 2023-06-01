@@ -62,4 +62,6 @@ outliers = function(data) {
   })
   gridExtra::grid.arrange(grobs = histograms, ncol = 4)
   output$histograms = histograms
+
+  return(output)
 }
