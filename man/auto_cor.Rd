@@ -4,7 +4,7 @@
 \alias{auto_cor}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-auto_cor(data, verbose = 1)
+auto_cor(data, ...)
 }
 \arguments{
 \item{data}{The tibble or data frame containing the data.}

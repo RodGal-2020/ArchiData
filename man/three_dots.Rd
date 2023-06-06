@@ -4,10 +4,10 @@
 \alias{three_dots}
 \title{Read the "..." arguments inside a function.}
 \usage{
-three_dots(arguments)
+three_dots(...)
 }
 \arguments{
-\item{arguments}{It should have the value \code{list(...)}}
+\item{...}{It should have the value \code{list(...)}}
 }
 \value{
 Nothing, it only exports the values to the environment.
@@ -28,9 +28,11 @@ The exportation of the values to the environment is done throgh the defition of 
 }
 
 \examples{
+\dontrun{
 f = function(...) {
   arguments = list(...)
   ArchiData::three_dots(arguments)
+}
 }
 
 }

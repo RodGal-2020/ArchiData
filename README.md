@@ -23,8 +23,6 @@ See [`LICENSE.md`](LICENSE.md).
 
 ## Ideas
 
-- `setup`:
-  - Use lists of elements for the `parameters.R` file instead of the `not_for_printing` and `function_names` parameters. YAML could also work.
-  - Add a comprobation for files declared, such as `csv_paths`, creating a list like the `not_for_printing` or the `function_names` lists.
+- Ellipsis in all graphical functions with the `three_dots()` function.
 - Emojis:
   - Use a certain style, as all of them in B&W or all from a certain palette or theme.
