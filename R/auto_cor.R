@@ -22,11 +22,18 @@
 #' This is a warning
 #'
 #' @export
-auto_cor = function(data, verbose = 1) {
-  data %<>% ArchiData::get_numeric(verbose)
+auto_cor = function(data, ...) {
+  ArchiData::three_dots(..., na_action = tidyr::drop_na)
+
+  data %<>% ArchiData::get_numeric(verbose = ArchiData_params$verbose)
+
+  if (!is.null(ArchiData_params$na_action)) {
+    warning("Applying `na_action`.")
+    data %<>% ArchiData_params$na_action()
+  }
 
   # Calcular la matriz de correlación
-  cor_matrix <- cor(data)
+  cor_matrix <- cor(data, use = "complete.obs")
 
   # Visualizar la matriz de correlación como un mapa de calor
   # library(reshape2)
@@ -36,8 +43,10 @@ auto_cor = function(data, verbose = 1) {
     ggplot2::ggplot(ggplot2::aes(x=Var1, y=Var2, fill=value)) +
     ggplot2::geom_tile() +
     ggplot2::scale_fill_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0, limit = c(-1,1), space = "Lab", name="Correlation") +
-    ggplot2::theme_minimal() +
+    ArchiData_params$ggplot_theme +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1))
+
+  cor_plot %<>% plotly::ggplotly()
 
   return(cor_plot)
 }

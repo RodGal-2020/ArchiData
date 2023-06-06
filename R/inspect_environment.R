@@ -20,7 +20,7 @@
 #'
 #' @export
 inspect_environment <- function(...) {
-  # source("config/parameters.R") # Made in .onLoad in zzz.R
+  # source("config/parameters.R") # Made in .onLoad in ZZZZZ.R
 
   params = ls(envir=.GlobalEnv) # Really important to have the parameter
   params = params[!params %in% get("function_names")] # Avoid functions
