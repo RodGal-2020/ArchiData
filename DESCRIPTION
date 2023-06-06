@@ -16,6 +16,7 @@ Imports:
     ggplot2,
     reshape2,
     rpart.plot,
-    tidymodels
+    tidymodels,
+    plotly
 Depends: crayon,
   magrittr
