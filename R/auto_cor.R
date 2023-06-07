@@ -26,6 +26,12 @@ auto_cor = function(data, ...) {
   ArchiData::three_dots(..., na_action = tidyr::drop_na)
 
   data %<>% ArchiData::get_numeric(verbose = ArchiData_params$verbose)
+  any_numeric = ncol(data) > 0
+
+  if (!any_numeric) {
+    warning("No numeric variable found. Returning zero status.")
+    return(0)
+  }
 
   if (!is.null(ArchiData_params$na_action)) {
     warning("Applying `na_action`.")
