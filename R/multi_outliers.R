@@ -27,6 +27,8 @@ multi_outliers = function(data, plot = TRUE) {
   # data = ggplot2::mpg
   ncols = min(3, ncol(data))
   numeric_data = data %>% ArchiData::get_numeric()
+  any_numeric = ncol(numeric_data) > 0
+  # any_nonnumeric = (n_col(data) - ncol(numeric_data)) > 0
 
   ### Boxplots
   print_boxplot = function(var) {
@@ -41,10 +43,12 @@ multi_outliers = function(data, plot = TRUE) {
 
     return(gg_boxplot)
   }
-  boxplots <- lapply(names(numeric_data), print_boxplot)
-  output$boxplots = boxplots
-  if (plot) {
-    gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
+  if (any_numeric) {
+    boxplots <- lapply(names(numeric_data), print_boxplot)
+    output$boxplots = boxplots
+    if (plot) {
+      gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
+    }
   }
 
   ### Histograms
