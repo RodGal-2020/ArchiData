@@ -28,7 +28,7 @@ check_path = function(path, print_ok = FALSE) {
     cat("You we're working in the following directory:", crayon::cyan(getwd()), "\n")
   } else {
     if (print_ok) {
-      cat("\u2705 File found.\n")
+      cat("\u2705 File ", crayon::cyan(getwd()), " found.\n")
     }
   }
 }
