@@ -15,7 +15,7 @@
 #' It returns...
 #'
 #' @examples
-#' print("TODO:")
+#' multi_outliers(iris)
 #'
 #' @section Warning:
 #' This is a warning
