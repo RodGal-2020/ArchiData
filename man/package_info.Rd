@@ -4,7 +4,7 @@
 \alias{package_info}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-package_info()
+package_info(only_date = FALSE)
 }
 \value{
 It returns...
