@@ -19,8 +19,17 @@
 #' This is a warning
 #'
 #' @export
-package_info = function() {
-  cat("Using ArchiData", packageDescription("ArchiData", fields = "Version"), "\n")
+package_info = function(only_date = FALSE) {
+  if (only_date) {
+    version = as.character(packageVersion("ArchiData"))
+    parts <- strsplit(version, ".", fixed = TRUE)[[1]]
+    lastPart <- parts[length(parts)]
+    date <- substr(lastPart, start = 1, stop = 6)
+    dateObj <- as.Date(date, format = "%y%m%d")
+    return(dateObj)
+  } else {
+    cat("Using ArchiData", packageDescription("ArchiData", fields = "Version"), "\n")
+  }
 }
 
 

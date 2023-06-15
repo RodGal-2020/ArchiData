@@ -23,12 +23,12 @@
 #' @export
 check_path = function(path, print_ok = FALSE) {
   if (!(file.exists(path) | dir.exists(path))) {
-    cat("\u2639 save_path doesn't exist. Aborting session.")
+    cat("\u2639 save_path doesn't exist. Aborting session.\n")
     stop()
-    cat("You we're working in the following directory:", crayon::cyan(getwd()))
+    cat("You we're working in the following directory:", crayon::cyan(getwd()), "\n")
   } else {
     if (print_ok) {
-      cat("\u2705 File found.")
+      cat("\u2705 File ", crayon::cyan(getwd()), " found.\n")
     }
   }
 }
