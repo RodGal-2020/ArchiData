@@ -21,9 +21,11 @@
 #' This is a warning
 #'
 #' @export
-ggplot2_theme = ggplot2::theme(
-  plot.title = ggplot2::element_text(size = 8, hjust = 0.5),
-  axis.title = ggplot2::element_text(size = 6),
-  axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, size = 4),
-  axis.text.y = ggplot2::element_text(size = 4)
-)
+ggplot2_theme = function() {
+  ggplot2::theme(
+    plot.title = ggplot2::element_text(size = 8, hjust = 0.5),
+    axis.title = ggplot2::element_text(size = 6),
+    axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, size = 4),
+    axis.text.y = ggplot2::element_text(size = 4)
+  )
+}
