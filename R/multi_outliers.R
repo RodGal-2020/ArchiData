@@ -22,62 +22,31 @@
 #'
 #' @export
 multi_outliers = function(data, plot = TRUE) {
+  # data = iris; plot = TRUE
+  # data = ggplot2::mpg
+
   output = list()
 
-  # data = ggplot2::mpg
   ncols = min(3, ncol(data))
-  numeric_data = data %>% ArchiData::get_numeric()
-  any_numeric = ncol(numeric_data) > 0
+  # numeric_data = data %>% ArchiData::get_numeric(verbose = 0)
+  numeric_cols = data %>% dplyr::select_if(is.numeric) %>% colnames()
+  # any_numeric = ncol(numeric_data) > 0
   # any_nonnumeric = (n_col(data) - ncol(numeric_data)) > 0
 
-  ### Boxplots
-  print_boxplot = function(var) {
-    # var = "Sepal.Length"
-    fill_color <- hcl.colors(length(names(numeric_data)))[match(var, names(numeric_data))]
-    gg_boxplot = numeric_data %>%
-      ggplot2::ggplot(ggplot2::aes(y = !!dplyr::sym(var))) +
-        ggplot2::geom_boxplot(fill = fill_color, color = "#9900CC",
-                              outlier.color = "red", outlier.shape = 18, outlier.size = 2) +
-        ggplot2::theme_minimal() +
-        ArchiData::ggplot2_theme() +
-        ggplot2::labs(x = var, y = NULL)
+  ### Boxplots + Histograms
+  boxplots = list()
+  histograms = list()
 
-    return(gg_boxplot)
-  }
-  if (any_numeric) {
-    boxplots <- lapply(names(numeric_data), print_boxplot)
-    output$boxplots = boxplots
-    if (plot) {
-      gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
+  for (var in names(data)) {
+    fill_color <- hcl.colors(length(names(data)))[match(var, names(data))]
+    if (var %in% numeric_cols) {
+      boxplots %<>% append(list(ArchiData::print_boxplot(data, var, fill_color = fill_color)))
     }
+    histograms %<>% append(list(ArchiData::print_hist(data, var, fill_color = fill_color)))
   }
 
-  ### Histograms
-  print_hist = function(var) {
-    color <- rainbow(length(names(data)))[match(var, names(data))]
-    gg_hist = data %>%
-      ggplot2::ggplot(ggplot2::aes(x = !!dplyr::sym(var))) +
-      ggplot2::labs(title = var, x = var, y = "Absolute frequency") +
-      ggplot2::theme_minimal() +
-      ArchiData::ggplot2_theme()
-
-    selected_data = data %>%
-      dplyr::select(dplyr::all_of(var)) %>%
-      magrittr::extract2(1)
-
-    if (is.factor(selected_data) || is.character(selected_data)) {
-      gg_hist = gg_hist +
-        ggplot2::geom_bar(fill = color, color = "white")
-    } else if (is.numeric(selected_data)) {
-      gg_hist = gg_hist +
-        ggplot2::geom_histogram(fill = color, color = "white", bins = 30)
-    }
-
-    return(gg_hist)
-  }
-  histograms <- lapply(names(data), print_hist)
-  output$histograms = histograms
   if (plot) {
+    gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
     gridExtra::grid.arrange(grobs = histograms, ncol = 4)
   }
 

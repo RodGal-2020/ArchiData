@@ -4,7 +4,7 @@
 \alias{print_boxplot}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-print_boxplot(data, x_var, x_label = "", title = "")
+print_boxplot(data, x_var, fill_color = "skyblue", title = "")
 }
 \arguments{
 \item{my_param}{Yep, it's a parameter.}
@@ -28,6 +28,6 @@ This is a warning
 }
 
 \examples{
-print("TODO:")
+print_boxplot(iris, "Petal.Width")
 
 }

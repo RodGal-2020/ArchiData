@@ -15,15 +15,22 @@
 #' It returns...
 #'
 #' @examples
-#' print("TODO:")
+#' print_boxplot(iris, "Petal.Width")
 #'
 #' @section Warning:
 #' This is a warning
 #'
 #' @export
-print_boxplot <- function(data, x_var, x_label = "", title = "") {
-  ggplot(data, aes(x = .data[[x_var]])) +
-    geom_boxplot(width = 0.2, color = "black", fill = "grey", outlier.color = "red", outlier.shape = 18, outlier.size = 3) +
-    theme_minimal() +
-    labs(x = x_label, title = title)
+print_boxplot <- function(data, x_var, fill_color = "skyblue", title = "") {
+  # fill_color = "skyblue"; title = ""
+  # data = iris; x_var = "Petal.Width"
+
+  # ggplot(data, aes(x = .data[[x_var]])) +
+  gg_boxplot = ggplot2::ggplot(data, ggplot2::aes(y = !!dplyr::sym(x_var))) +
+    ggplot2::labs(x = x_var, y = NULL, title = title) +
+    ggplot2::theme_minimal() +
+    ArchiData::ggplot2_theme() +
+    ggplot2::geom_boxplot(width = 0.2, color = "black", fill = fill_color, outlier.color = "red", outlier.shape = 18, outlier.size = 2)
+
+  return(gg_boxplot)
 }
