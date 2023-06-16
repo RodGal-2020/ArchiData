@@ -1,7 +1,7 @@
 # 🏛️ ArchiData
 
-[![build](https://github.com/Xopre/ArchiData/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Xopre/ArchiData/actions/workflows/pages/pages-build-deployment)
-[![R](https://github.com/Xopre/ArchiData/actions/workflows/r.yml/badge.svg?branch=main)](https://github.com/Xopre/ArchiData/actions/workflows/r.yml)
+[![build](https://github.com/RodGal-2020/ArchiData/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/RodGal-2020/ArchiData/actions/workflows/pages/pages-build-deployment)
+[![R](https://github.com/RodGal-2020/ArchiData/actions/workflows/r.yml/badge.svg?branch=main)](https://github.com/RodGal-2020/ArchiData/actions/workflows/r.yml)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- [codecov] https://codecov.io/gh/RodGal-2020/archiData/settings/badge -->
 
