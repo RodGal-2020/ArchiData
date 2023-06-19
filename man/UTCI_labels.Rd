@@ -10,9 +10,6 @@ An object of class \code{character} of length 11.
 \usage{
 UTCI_labels
 }
-\arguments{
-\item{my_param}{Yep, it's a parameter.}
-}
 \value{
 It returns...
 }

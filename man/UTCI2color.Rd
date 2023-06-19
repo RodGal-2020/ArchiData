@@ -7,7 +7,7 @@
 UTCI2color(UTCI)
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{UTCI}{A vector of numerical or nonnumerical UTCI values.}
 }
 \value{
 It returns...

@@ -7,7 +7,9 @@
 check_path(path, print_ok = FALSE)
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{path}{The path to the file or folder}
+
+\item{print_ok}{Do you want to print an OK emoji if the path exists?}
 }
 \value{
 It returns...

@@ -9,7 +9,7 @@ get_numeric(data, verbose = 1)
 \arguments{
 \item{data}{The tibble or data frame containing the data.}
 
-\item{...}{\code{verbose} for now.}
+\item{verbose}{To launch the warning if rows are omitted.}
 }
 \value{
 It returns...

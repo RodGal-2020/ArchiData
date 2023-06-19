@@ -9,7 +9,8 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param path The path to the file or folder
+#' @param print_ok Do you want to print an OK emoji if the path exists?
 #'
 #' @return
 #' It returns...

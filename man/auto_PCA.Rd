@@ -33,7 +33,6 @@ This is a warning
 }
 
 \examples{
-data(iris)
 iris_pca = auto_PCA(iris)
 iris_pca$loadings
 iris_pca$loadings_plot

@@ -9,7 +9,10 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param data The dataset.
+#' @param x_var The name of the variable of interest, as a string.
+#' @param fill_color The color of the boxplot. Defaults to "skyblue".
+#' @param title The title that should appear in the graph.
 #'
 #' @return
 #' It returns...

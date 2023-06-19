@@ -7,7 +7,7 @@
 UTCI2classification(UTCI)
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{UTCI}{A vector of numerical UTCI values.}
 }
 \value{
 It returns...

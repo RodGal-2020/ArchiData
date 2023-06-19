@@ -9,7 +9,10 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param data The tibble.
+#' @param formula The formula we want to follow.
+#' @param model_mode "classification" or "regression". Defaults to the first.
+#' @param model_depth Depth of the tree. Defaults to 3.
 #'
 #' @return The fit engine for a tree model, the result of applying `extract_fit_engine()` to the trained model.
 #'

@@ -7,7 +7,13 @@
 auto_tree(data, formula, model_mode = "classification", model_depth = 3)
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{data}{The tibble.}
+
+\item{formula}{The formula we want to follow.}
+
+\item{model_mode}{"classification" or "regression". Defaults to the first.}
+
+\item{model_depth}{Depth of the tree. Defaults to 3.}
 }
 \value{
 The fit engine for a tree model, the result of applying \code{extract_fit_engine()} to the trained model.

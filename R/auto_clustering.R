@@ -13,6 +13,9 @@
 #' @param x The independant variable (TODO: "variables").
 #' @param y The dependant variable.
 #'
+#' @importFrom magrittr %<>%
+#' @importFrom stats cor cutree dist hclust kmeans prcomp reorder
+#'
 #' @return A dendogram plot.
 #'
 #' @examples
@@ -24,6 +27,8 @@
 #'
 #' @export
 auto_clustering = function(data, x, y) {
+  cluster <- NULL
+
   data %<>% ArchiData::get_numeric()
 
   data_scaled <- scale(data)

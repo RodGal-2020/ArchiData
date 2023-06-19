@@ -9,8 +9,6 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
-#'
 #' @return
 #' It returns...
 #'

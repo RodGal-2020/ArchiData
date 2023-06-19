@@ -32,14 +32,13 @@ setup = function(...) {
   #   }
   # }
   ##########################################
-  arguments <- list(...)
-  ArchiData::three_dots(arguments)
+  ArchiData::three_dots(list(...))
 
-  if (is.null(arguments$default)) {
+  if (is.null(ArchiData_params$default)) {
     default <- readline("Do you want to use the default parameters' path (config/parameters.R)? (1/0): \n") %>% as.numeric()
   }
 
-  if (default) {
+  if (ArchiData_params$default) {
     p_path = "config/parameters.R"
   } else {
     p_path <- readline(paste0("Write the path to the ", crayon::silver("parameters.R"), " file: \n"))

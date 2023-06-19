@@ -12,6 +12,8 @@
 #' @param data The tibble or data frame containing the data.
 #' @param ... `verbose` for now.
 #'
+#' @importFrom magrittr %<>%
+#'
 #' @return A correlation heatmap.
 #'
 #' @examples
@@ -23,6 +25,8 @@
 #'
 #' @export
 auto_cor = function(data, ...) {
+  Var1 <- Var2 <- value <- NULL
+
   ArchiData::three_dots(..., na_action = tidyr::drop_na)
 
   data %<>% ArchiData::get_numeric(verbose = ArchiData_params$verbose)

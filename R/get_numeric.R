@@ -10,7 +10,9 @@
 #' `r lifecycle::badge("experimental")`
 #'
 #' @param data The tibble or data frame containing the data.
-#' @param ... `verbose` for now.
+#' @param verbose To launch the warning if rows are omitted.
+#'
+#' @importFrom magrittr %<>%
 #'
 #' @return
 #' It returns...

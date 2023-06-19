@@ -24,7 +24,7 @@ Auxiliary function for the automated definition of the common omitted parameters
 }
 \section{Warning}{
 
-The exportation of the values to the environment is done throgh the defition of \strong{global variables}.
+The exportation of the values to the environment is done throgh the definition of \strong{global variables}.
 }
 
 \examples{

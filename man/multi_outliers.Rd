@@ -7,7 +7,9 @@
 multi_outliers(data, plot = TRUE)
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{data}{The dataset.}
+
+\item{plot}{Do you want to plot the results?}
 }
 \value{
 It returns...

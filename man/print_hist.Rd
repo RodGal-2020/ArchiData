@@ -7,7 +7,13 @@
 print_hist(data, x_var, fill_color = "skyblue", title = "")
 }
 \arguments{
-\item{my_param}{Yep, it's a parameter.}
+\item{data}{The dataset.}
+
+\item{x_var}{The name of the variable of interest, as a string.}
+
+\item{fill_color}{The color of the boxplot. Defaults to "skyblue".}
+
+\item{title}{The title that should appear in the graph.}
 }
 \value{
 It returns...

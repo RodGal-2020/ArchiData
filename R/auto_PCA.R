@@ -11,6 +11,8 @@
 #'
 #' @param data The tibble or data frame containing the data.
 #'
+#' @importFrom magrittr %<>%
+#'
 #' @return
 #' A list of three elements:
 #'
@@ -19,7 +21,6 @@
 #' - `var_explained_plot`.
 #'
 #' @examples
-#' data(iris)
 #' iris_pca = auto_PCA(iris)
 #' iris_pca$loadings
 #' iris_pca$loadings_plot
@@ -30,6 +31,7 @@
 #'
 #' @export
 auto_PCA = function(data) {
+  PC <- VarExplained <- PC1 <- PC2 <- variables <- NULL
 
   data %<>% ArchiData::get_numeric()
 
@@ -45,10 +47,12 @@ auto_PCA = function(data) {
   loadings <- pca$rotation
 
   # Gráfico de varianza explicada por cada componente
-  var_explained_plot <- ggplot2::ggplot(data.frame(PC = 1:length(var_explained), VarExplained = var_explained), ggplot2::aes(x = PC, y = VarExplained)) +
-    ggplot2::geom_bar(stat = "identity", fill = "violet") +
-    ggplot2::labs(x = "Componente Principal", y = "Varianza Explicada (%)") +
-    ggplot2::theme_minimal()
+  new_data <- data.frame(PC = 1:length(var_explained), VarExplained = var_explained)
+  var_explained_plot <- new_data %>%
+    ggplot2::ggplot(ggplot2::aes(x = PC, y = VarExplained)) +
+      ggplot2::geom_bar(stat = "identity", fill = "violet") +
+      ggplot2::labs(x = "Componente Principal", y = "Varianza Explicada (%)") +
+      ggplot2::theme_minimal()
 
   # Gráfico de coeficientes de carga
   loadings_plot <- ggplot2::ggplot(data.frame(variables = colnames(data), PC1 = loadings[, 1], PC2 = loadings[, 2]), ggplot2::aes(x = PC1, y = PC2, label = variables)) +

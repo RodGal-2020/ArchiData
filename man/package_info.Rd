@@ -6,6 +6,9 @@
 \usage{
 package_info(only_date = FALSE)
 }
+\arguments{
+\item{only_date}{Do you want to print only the date of the last version?}
+}
 \value{
 It returns...
 }

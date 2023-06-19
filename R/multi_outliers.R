@@ -9,7 +9,11 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param data The dataset.
+#' @param plot Do you want to plot the results?
+#'
+#' @importFrom magrittr %<>%
+#' @importFrom grDevices hcl.colors
 #'
 #' @return
 #' It returns...

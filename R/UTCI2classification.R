@@ -9,7 +9,7 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param UTCI A vector of numerical UTCI values.
 #'
 #' @return
 #' It returns...

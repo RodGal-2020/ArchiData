@@ -9,6 +9,10 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
+#' @param only_date Do you want to print only the date of the last version?
+#'
+#' @importFrom utils packageVersion packageDescription
+#'
 #' @return
 #' It returns...
 #'
@@ -23,9 +27,9 @@ package_info = function(only_date = FALSE) {
   if (only_date) {
     version = as.character(packageVersion("ArchiData"))
     parts <- strsplit(version, ".", fixed = TRUE)[[1]]
-    lastPart <- parts[length(parts)]
-    date <- substr(lastPart, start = 1, stop = 6)
-    dateObj <- as.Date(date, format = "%y%m%d")
+    date_part <- parts[4]
+    # date <- substr(date_part, start = 1, stop = 6)
+    dateObj <- as.Date(date_part, format = "%y%m%d")
     return(dateObj)
   } else {
     cat("Using ArchiData", packageDescription("ArchiData", fields = "Version"), "\n")

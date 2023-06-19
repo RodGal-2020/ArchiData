@@ -2,3 +2,10 @@
 ^renv\.lock$
 ^ArchiData\.Rproj$
 ^\.Rproj\.user$
+^\.github$
+^Ideas\.R
+^LICENSE\.md
+^_config\.yml
+^config
+^desktop\.ini
+^utils

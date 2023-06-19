@@ -23,7 +23,7 @@
 #' }
 #'
 #' @section Warning:
-#' The exportation of the values to the environment is done throgh the defition of **global variables**.
+#' The exportation of the values to the environment is done throgh the definition of **global variables**.
 #'
 #' @export
 three_dots = function(...) {

@@ -6,9 +6,6 @@
 \usage{
 ggplot2_theme()
 }
-\arguments{
-\item{my_param}{Yep, it's a parameter.}
-}
 \value{
 It returns...
 }

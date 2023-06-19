@@ -9,7 +9,9 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param my_param Yep, it's a parameter.
+#' @param UTCI A vector of numerical or nonnumerical UTCI values.
+#'
+#' @importFrom magrittr %<>%
 #'
 #' @return
 #' It returns...
@@ -33,7 +35,8 @@ UTCI2color = function(UTCI) {
       breaks = c(-Inf, -40, -27, -12, 0, 9, 26, 28, 32, 38, 46, Inf),
       labels = ArchiData::UTCI_colors,
       right = TRUE
-    ) %>% as.character()
+    ) %>%
+      as.character()
   }
 
   return(output)
