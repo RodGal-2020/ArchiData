@@ -3,7 +3,7 @@
 [![build](https://github.com/RodGal-2020/ArchiData/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/RodGal-2020/ArchiData/actions/workflows/pages/pages-build-deployment)
 [![R](https://github.com/RodGal-2020/ArchiData/actions/workflows/r.yml/badge.svg?branch=main)](https://github.com/RodGal-2020/ArchiData/actions/workflows/r.yml)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html)
-<!-- [codecov] https://codecov.io/gh/RodGal-2020/archiData/settings/badge -->
+[![codecov](https://codecov.io/gh/RodGal-2020/archiData/settings/badge)](https://app.codecov.io/gh/RodGal-2020/archiData?branch=main)
 
 ArchiData is an R package for the analysis of architectural data. It provides a suite of functions for analyzing and visualizing various aspects of architectural design, such as building dimensions, room layouts, and facade features.
 
