@@ -2,6 +2,7 @@
 
 export("%>%")
 export(MRT)
+export(MVR)
 export(UTCI)
 export(UTCI2classification)
 export(UTCI2color)
