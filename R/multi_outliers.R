@@ -45,8 +45,12 @@ multi_outliers = function(data, plot = TRUE) {
     fill_color <- hcl.colors(length(names(data)))[match(var, names(data))]
     if (var %in% numeric_cols) {
       boxplots %<>% append(list(ArchiData::print_boxplot(data, var, fill_color = fill_color)))
+      histograms %<>% append(list(ArchiData::print_hist(data, var, fill_color = fill_color)))
+    } else {
+      if (length(unique(data[,var][[1]])) < 8) {
+        histograms %<>% append(list(ArchiData::print_hist(data, var, fill_color = fill_color)))
+      }
     }
-    histograms %<>% append(list(ArchiData::print_hist(data, var, fill_color = fill_color)))
   }
 
   if (plot) {
