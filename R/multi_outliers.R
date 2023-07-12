@@ -10,7 +10,7 @@
 #' `r lifecycle::badge("experimental")`
 #'
 #' @param data The dataset.
-#' @param plot Do you want to plot the results?
+#' @param plot Do you want to plot the results? Admits "all", "hist", "boxplot".
 #'
 #' @importFrom magrittr %<>%
 #' @importFrom grDevices hcl.colors
@@ -25,9 +25,15 @@
 #' This is a warning
 #'
 #' @export
-multi_outliers = function(data, plot = TRUE) {
-  # data = iris; plot = TRUE
+multi_outliers = function(data, plot = "all") {
+  # data = iris; plot = "all"
   # data = ggplot2::mpg
+  commands = c("all", "hist", "boxplot")
+
+  if (!plot %in% commands) {
+    warning("`plot` command not recognized. Use one of: ", paste0(commands, sep = ", "), "\n\nReturning 0 status.")
+    return(0)
+  }
 
   output = list()
 
@@ -44,7 +50,10 @@ multi_outliers = function(data, plot = TRUE) {
   for (var in names(data)) {
     fill_color <- hcl.colors(length(names(data)))[match(var, names(data))]
     if (var %in% numeric_cols) {
-      boxplots %<>% append(list(ArchiData::print_boxplot(data, var, fill_color = fill_color)))
+      if (plot %in% c("all", "boxplot")) {
+        boxplots %<>% append(list(ArchiData::print_boxplot(data, var, fill_color = fill_color)))
+      }
+      if (plot %in% c("all", "hist"))
       histograms %<>% append(list(ArchiData::print_hist(data, var, fill_color = fill_color)))
     } else {
       if (length(unique(data[,var][[1]])) < 8) {
@@ -53,10 +62,14 @@ multi_outliers = function(data, plot = TRUE) {
     }
   }
 
-  if (plot) {
+  if (plot %in% c("all", "boxplot")) {
     gridExtra::grid.arrange(grobs = boxplots, ncol = 4)
+  }
+  if (plot %in% c("all", "hist")) {
     gridExtra::grid.arrange(grobs = histograms, ncol = 4)
   }
+
+  # return(output)
 
   ### k-neighboors
   # # library(dbscan)
@@ -150,6 +163,4 @@ multi_outliers = function(data, plot = TRUE) {
   #   print(paste("Variable:", names(data)[i]))
   #   print(which(outliers[, i]))
   # }
-
-  return(output)
 }

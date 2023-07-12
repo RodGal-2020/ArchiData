@@ -4,12 +4,12 @@
 \alias{multi_outliers}
 \title{This is a shorter description which appears when the name of the function is recommended.}
 \usage{
-multi_outliers(data, plot = TRUE)
+multi_outliers(data, plot = "all")
 }
 \arguments{
 \item{data}{The dataset.}
 
-\item{plot}{Do you want to plot the results?}
+\item{plot}{Do you want to plot the results? Admits "all", "hist", "boxplot".}
 }
 \value{
 It returns...
