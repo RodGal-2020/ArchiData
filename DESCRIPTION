@@ -1,6 +1,6 @@
 Package: ArchiData
 Title: 🏛️ ArchiData: Architectural Data Analysis
-Version: 0.2.1.230712.1
+Version: 0.2.2.231006.0
 Authors@R: 
     person("Xopre", "-", , "rodgal2020@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5825-2724"))
@@ -10,10 +10,7 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports:
-    dplyr,
-    tidyr,
-    tibble,
-    ggplot2,
+    tidyverse,
     reshape2,
     rpart.plot,
     plotly,
@@ -21,5 +18,6 @@ Imports:
     parsnip,
     recipes,
     workflows,
-    crayon
+    crayon,
+    xml2
 Depends: magrittr
