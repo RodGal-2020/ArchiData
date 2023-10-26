@@ -40,6 +40,10 @@ kmls2tibble
 
 Read kml files and convert them to tibbles
 }
+\section{warning Note that only the directions or the stops should be provided.}{
+NA
+}
+
 \examples{
 print("TODO:")
 

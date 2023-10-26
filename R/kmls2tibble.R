@@ -31,6 +31,8 @@
 #'
 #' @return A tibble with the data from the kml files.
 #'
+#' @section warning Note that only the directions or the stops should be provided.
+#'
 #' @examples
 #' print("TODO:")
 #'
