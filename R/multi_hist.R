@@ -16,7 +16,7 @@
 #' It returns...
 #'
 #' @examples
-#' multi_outliers(iris)
+#' multi_hist(iris)
 #'
 #' @section Warning:
 #' This is a warning

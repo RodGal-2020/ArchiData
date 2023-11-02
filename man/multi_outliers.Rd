@@ -45,7 +45,7 @@ This is a warning
 }
 
 \examples{
-multi_outliers(iris)
+multi_hist(iris)
 
 multi_outliers(iris)
 
