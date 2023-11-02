@@ -7,7 +7,7 @@
 #' @description
 #' This is a template.
 #'
-#' `r lifecycle::badge("experimental")`
+#' `r lifecycle::badge("deprecated")` **except for the boxplots**. Try `multi_hist()` instead for the histograms.
 #'
 #' @param data The dataset.
 #' @param plot Do you want to plot the results? Admits "all", "hist", "boxplot".
