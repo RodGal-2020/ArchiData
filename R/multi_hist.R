@@ -46,7 +46,7 @@ multi_hist = function(data, binwidth = "scott") {
           ggplot2::geom_histogram(fill = "darkorchid3", linewidth = 0.5, binwidth = my_binwidth) +
           ggplot2::ggtitle(
             # subtitle = paste(dim(join_data)[1], "valores"),
-            label = paste(c, "en agosto de 2023")
+            label = c
           ) +
           ggplot2::theme_classic() +
           ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)) +
