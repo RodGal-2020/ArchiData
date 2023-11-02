@@ -22,7 +22,7 @@
 #' This is a warning
 #'
 #' @export
-multi_outliers = function(data, binwidth = "scott") {
+multi_hist = function(data, binwidth = "scott") {
   # data = iris; binwidth = "scott"
   # data = ggplot2::mpg
 
