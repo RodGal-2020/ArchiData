@@ -92,5 +92,11 @@ kmls2tibbles = function(kml_files) {
   ) %>%
     tidyr::unnest_longer(Rute) %>%
     tidyr::unnest_longer(c(Ubication, Coordinates)) %>%
-    tidyr::unnest_wider(Coordinates)
+    tidyr::unnest_wider(Coordinates) %>%
+    dplyr::group_by(Rute) %>%
+    dplyr::mutate(
+      Stop = dplyr::row_number()
+    ) %>%
+    dplyr::relocate(Rute, Stop) %>%
+    dplyr::ungroup()
 }
