@@ -28,17 +28,17 @@
 #' UTCI_approx -- The Universal Thermal Climate Index (UTCI) for the input conditions as approximated by a 4-D polynomial.
 #'
 #' @examples
-#' ta = 24
-#' tr = 24
-#' rh = 60
-#' vel = 1.5
+# ta = c(24, 32, NA)
+# tr = c(24, 26, 26)
+# rh = c(60, 50, 40)
+# vel = c(0, 1.5, 18)
 #'
 #' UTCI(ta, tr, vel, rh)
 #'
 #' @export
 UTCI = function(ta, tr, vel, rh) {
   # set upper and lower limits of air velocity according to Fiala model scenarios
-  vel = min(max(vel, 0.5), 17)
+  vel = pmin(pmax(vel, 0.5), 17)
 
   # metrics derived from the inputs used in the polynomial equation
   saturated_vapor_pressure_hpa = function(db_temp) {
